@@ -9,7 +9,7 @@ enum CallStatus {
     FINISHED = 'FINISHED'
 }
 
-const Agent = ({ user, userId, type }) => {
+const Agent = ({ userName }: AgentProps) => {
 
     const callStatus = CallStatus.INACTIVE
     const isSpeaking = true;
@@ -35,7 +35,7 @@ const Agent = ({ user, userId, type }) => {
                 <div className="card-border">
                     <div className="card-content">
                         <Image src="/user-avatar.png" alt="Avatar User" width={540} height={540} className="rounded-full object-cover size-[120px]" />
-                        <h3>{user}</h3>
+                        <h3>{userName}</h3>
                     </div>
                 </div>
             </div>
